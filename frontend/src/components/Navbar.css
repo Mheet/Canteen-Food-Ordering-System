@@ -1,0 +1,119 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 20px;
+  }
+  
+  /* Logo Section */
+  .logo-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .logo-text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Nav Links */
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-item {
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Sign Up Button */
+  .sign-up-btn {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  /* Login Page Overlay */
+  .login-page-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent dark background */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
+    z-index: 10; /* Make sure it stays on top of HomePage */
+  }
+  
+  .login-page-wrapper.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 10px;
+      border-radius: 0;
+    }
+  
+    .nav-links {
+      display: none; /* Hide nav links on smaller screens */
+    }
+  
+    .logo-text {
+      font-size: 20px; /* Slightly smaller logo text */
+    }
+  
+    .sign-up-btn {
+      margin-top: 10px; /* Add some space for the sign-up button */
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 5px;
+    }
+  
+    .logo-text {
+      font-size: 18px; /* Even smaller logo text */
+    }
+  
+    .sign-up-btn {
+      padding: 8px 15px; /* Adjust button size for mobile */
+      font-size: 14px;
+    }
+  
+    /* Adjust the login page wrapper for smaller devices */
+    .login-page-wrapper {
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-top: 50px;
+    }
+  }
+  
