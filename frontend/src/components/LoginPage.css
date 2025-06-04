@@ -1,0 +1,183 @@
+.container {
+    width: 75vw;
+    height: 75vh;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .common-left-right {
+    display: flex; /* Align left-div and right-div horizontally */
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+  }
+  
+  .left-div {
+    flex: 4; /* Give more space to the left-div on larger screens */
+    padding: 20px;
+    border-radius: 10px;
+  
+    /* Center the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; /* Set a max-width for better form alignment */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-form label {
+    margin-bottom: 5px;
+  }
+  
+  
+  
+  .login-button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .login-button:hover {
+    background-color: #218838;
+  }
+  
+  .right-div {
+    flex: 6; /* Give more space to the right-div */
+    padding: 20px;
+    position: relative; /* Allows absolute positioning for scroll-animation */
+    border-radius: 10px;
+  }
+  
+  .scroll-box {
+    background-image: url(src/assets/607.jpg);
+    background-size: contain;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 20px;
+    border-radius: 10px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .scroll-animation {
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    position: relative;
+    height: 650px;
+    overflow: hidden;
+  }
+  
+  @keyframes scrollup {
+    0% { transform: translateY(0); }
+    10% { transform: translateY(-140px); }
+    20% { transform: translateY(-140px); }
+    45% { transform: translateY(-475px); }
+    55% { transform: translateY(-475px); }
+    80% { transform: translateY(-800px); }
+    90% { transform: translateY(-800px); }
+    100% { transform: translateY(-950px); }
+  }
+  
+  .box {
+    width: 300px;
+    height: 270px;
+    border-radius: 10px;
+    background-color: rgb(177, 177, 177);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 100%;
+    animation-name: scrollup;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .box1 { animation-delay: 0s; }
+  .box2 { animation-delay: 5s; }
+  .box3 { animation-delay: 10s; }
+  
+  /* Cancel button styling */
+  .cancel-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 1; /* Ensure it's on top of other elements */
+  }
+  
+  .cancel-button:hover {
+    background-color: #e60000; /* Darker red on hover */
+  }
+  
+  /* Responsive design for mobile */
+  @media only screen and (max-width: 768px) {
+    .common-left-right {
+      flex-direction: column; /* Stack the left and right divs vertically */
+    }
+  
+    .right-div {
+      display: none; /* Hide the right-div on mobile */
+    }
+  
+    .left-div {
+      flex: 1; /* Make left-div take full width on mobile */
+    }
+  
+    .container {
+      width: 90vw; /* Adjust container width on smaller screens */
+      height: auto; /* Let height adjust based on content */
+      position: relative; /* Allow the content to flow naturally */
+    }
+  
+    .login-form {
+      max-width: 100%; /* Make the login form full width on mobile */
+    }
+  
+    .cancel-button {
+      top: 10px;
+      right: 10px; /* Keep button in top-right on mobile */
+    }
+  }
+  
