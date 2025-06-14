@@ -51,21 +51,26 @@ A full-stack web application to digitize and streamline food ordering in college
 Browse food items with categories and images.
 ![User Menu](images/user-menu.png)
 
+
 ### ❤️ Favorite Items
 Users can mark favorite dishes for quick access.
 ![Favorites](images/fav.png)
+
 
 ### 🛒 Cart View
 Add items to cart and place orders easily.
 ![Cart](images/cart.png)
 
+
 ### 🔄 Track Current Orders
 Track your placed orders in real-time.
 ![Current Order](images/current-order.png)
 
+
 ### 🧑‍💼 Admin Dashboard
 Admin panel showing overview and stats.
 ![Admin Dashboard](images/admin-dashboard.png)
+
 
 ### ➕ Add New Food Item
 Admin can add new food items via form.
